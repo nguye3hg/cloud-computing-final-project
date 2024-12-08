@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cognitodashboard-dev-e42f8-authRole",
+      "UnauthRoleArn": "arn:aws:iam::654654565595:role/amplify-cognitodashboard-dev-e42f8-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::654654565595:role/amplify-cognitodashboard-dev-e42f8-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-cognitodashboard-dev-e42f8-deployment",
+      "UnauthRoleName": "amplify-cognitodashboard-dev-e42f8-unauthRole",
+      "StackName": "amplify-cognitodashboard-dev-e42f8",
+      "StackId": "arn:aws:cloudformation:us-east-2:654654565595:stack/amplify-cognitodashboard-dev-e42f8/3f82cd10-ae9d-11ef-8e95-06b82123c7e5",
+      "AmplifyAppId": "d3plnizkgk8nvx"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d3plnizkgk8nvx",
+          "type": "manual"
+        }
+      },
+      "auth": {
+        "cognitodashboard31da2e98": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.Demographics {
+  width: 400px;
+  height: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.EngagementOverTime {
+  width: 400px;
+  height: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.BasketAnalysis {
+  width: 400px;
+  height: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.BrandPreferences {
+  width: 400px;
+  height: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.RetailDashboard {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}

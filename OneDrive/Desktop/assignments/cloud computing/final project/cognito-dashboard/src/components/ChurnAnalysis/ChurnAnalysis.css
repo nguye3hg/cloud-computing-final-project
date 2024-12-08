@@ -1,0 +1,21 @@
+.ChurnAnalysis table {
+  width: 90%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.ChurnAnalysis th,
+.ChurnAnalysis td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.ChurnAnalysis th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.ChurnAnalysis tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
