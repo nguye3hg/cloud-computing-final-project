@@ -1,0 +1,68 @@
+.transactions-page {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.fetch-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fetch-button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+}
+
+.table-container {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.transactions-table {
+  width: 80%;
+  border-collapse: collapse;
+}
+
+.transactions-table th,
+.transactions-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.transactions-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.transactions-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.transactions-table tr:hover {
+  background-color: #ddd;
+}
