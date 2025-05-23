@@ -1,4 +1,8 @@
 # Cloud-Based Retail Analytics Web App
+![Dashboard 1](https://raw.githubusercontent.com/nguye3hg/cloud-computing-final-project/master/dashboard-img-1.png)
+![Dashboard 2](https://raw.githubusercontent.com/nguye3hg/cloud-computing-final-project/master/dashboard-img-2.png)
+![Dashboard 3](https://raw.githubusercontent.com/nguye3hg/cloud-computing-final-project/master/dashboard-img-3.png)
+![Dashboard 4](https://raw.githubusercontent.com/nguye3hg/cloud-computing-final-project/master/dashboard-img-4.png)
 
 ## Description:
 A serverless React web app using AWS Amplify, Cognito, Lambda functions, and Amazon RDS. Provides secure user login, interactive dashboards (customer segmentation, lifetime value, cross-sell, seasonal trends), and real-time data pipelines.
