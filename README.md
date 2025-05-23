@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Cloud-Based Retail Analytics Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description:
+A serverless React web app using AWS Amplify, Cognito, Lambda functions, and Amazon RDS. Provides secure user login, interactive dashboards (customer segmentation, lifetime value, cross-sell, seasonal trends), and real-time data pipelines.
 
-## Available Scripts
+## Tech stack:
+• Frontend: React
+• Auth: AWS Cognito (User Pool)
+• Compute: AWS Lambda (Node.js)
+• Database: Amazon RDS ( MySQL)
+• IaC & Hosting: AWS Amplify CLI / CloudFormation
 
-In the project directory, you can run:
+––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
-### `npm start`
+## ENVIRONMENT VARIABLES & CONFIGURATION (all to go into a single .env or similar file)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### AWS:
+```
+AWS_ACCESS_KEY_ID=your_aws_access_key_id
+AWS_SECRET_ACCESS_KEY=your_aws_secret_access_key
+AWS_REGION=us-east-1 ← your region
+```
+### Amplify :
+```
+REACT_APP_GRAPHQL_API_URL=https://XXXXXXXX.appsync-api.us-east-1.amazonaws.com/graphql
+```
+### Cognito:
+```
+REACT_APP_COGNITO_USER_POOL_ID=us-east-1_XXXXXXXXX
+REACT_APP_COGNITO_APP_CLIENT_ID=XXXXXXXXXXXXXXXXXXXXXXXXXX
+REACT_APP_COGNITO_IDENTITY_POOL_ID=us-east-1:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+```
+### RDS:
+```
+RDS_HOST=your-db-endpoint.abcdefg.us-east-1.rds.amazonaws.com
+RDS_PORT=5432 ← or 3306 for MySQL
+RDS_DATABASE=your_database_name
+RDS_USERNAME=your_db_username
+RDS_PASSWORD=your_db_password
+```
+### Lambda (if you need to reference function ARNs):
+```
+REACT_APP_ETL_LAMBDA_ARN=arn:aws:lambda:us-east-1:123456789012:function:yourFunctionName
+```
+––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## LOCAL SETUP STEPS
 
-### `npm test`
+Clone the repo and cd into its folder
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Run npm install to install React dependencies
 
-### `npm run build`
+Install and configure Amplify CLI (npm install -g @aws-amplify/cli)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Run amplify init to bootstrap your backend environment
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Run amplify add auth to set up Cognito user pools
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Run amplify add function to create any Lambda ETL functions
 
-### `npm run eject`
+Run amplify push to deploy Cognito, AppSync, Lambda, RDS connections
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Create a .env file with the variables listed above
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Run npm start to launch the React dev server on localhost
